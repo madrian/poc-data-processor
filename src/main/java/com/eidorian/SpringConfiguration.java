@@ -1,17 +1,16 @@
 package com.eidorian;
 
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.task.TaskExecutor;
-import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 @Configuration
 public class SpringConfiguration {
 
-    // @Bean
-    // public TaskExecutor taskExecutor() {
-    //     ThreadPoolTaskExecutor taskExecutor = new ThreadPoolTaskExecutor();
-    //     taskExecutor.setWaitForTasksToCompleteOnShutdown(true);
-    //     return taskExecutor();
-    // }
+    @Bean
+    public AmazonDynamoDB amazonDynamoDB() {
+        AmazonDynamoDB amazonDynamoDB = AmazonDynamoDBClientBuilder.defaultClient();
+        return amazonDynamoDB;
+    }
 }
