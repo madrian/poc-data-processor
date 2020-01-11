@@ -1,5 +1,10 @@
 # PoC Data Processor
+This is a simple data processor demo application using Spring Boot and Spring Cloud to access AWS SQS
+and DynamoDB.
 
+You can read more details about this in my blog post at
+http://code.eidorian.com/aws/2019/12/17/aws-poc-data-feed-serverless.html. It is a four-part post for serverless
+webhooks using AWS Lambda.
 
 ## Build and run
 Build the application
