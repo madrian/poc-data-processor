@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.aws.messaging.config.SimpleMessageListenerContainerFactory;
-import org.springframework.cloud.aws.messaging.listener.SimpleMessageListenerContainer;
 import org.springframework.cloud.aws.messaging.listener.annotation.SqsListener;
 import org.springframework.context.annotation.Bean;
 
@@ -17,9 +16,6 @@ import java.util.Map;
 @SpringBootApplication
 public class DataProcessor {
     final static String TABLE_NAME = "poc_data_feed";
-
-    @Autowired
-    private SimpleMessageListenerContainer listenerContainer;
 
     @Autowired
     private AmazonDynamoDB dynamoDB;
